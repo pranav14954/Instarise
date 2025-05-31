@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insta Rise - Buy Instagram Followers & Views</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f8fa;
+      color: #333;
+    }
+    header {
+      background: #405de6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-height: 60px;
+      margin-bottom: 10px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    .pricing {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .package {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1 1 200px;
+      padding: 20px;
+      text-align: center;
+    }
+    .package h3 {
+      margin: 0 0 10px;
+    }
+    .price {
+      font-size: 2em;
+      color: #405de6;
+    }
+    button {
+      background: #405de6;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background: #3039b3;
+    }
+    .qr-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .qr-section img {
+      max-width: 300px;
+      border: 5px solid #eee;
+      border-radius: 8px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+    a {
+      color: #405de6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Insta Rise Logo" />
+  <h1>Insta Rise</h1>
+  <p>Boost your Instagram with real followers and views!</p>
+</header>
+
+<div class="container">
+  <section>
+    <h2>Our Packages</h2>
+    <div class="pricing">
+      <div class="package">
+        <h3>100 Followers</h3>
+        <p class="price">₹25</p>
+        <button onclick="order('100 Followers', 25)">Order Now</button>
+      </div>
+      <div class="package">
+        <h3>500 Followers</h3>
+        <p class="price">₹80</p>
+        <button onclick="order('500 Followers', 80)">Order Now</button>
+      </div>
+      <div class="package">
+        <h3>1000 Followers</h3>
+        <p class="price">₹150</p>
+        <button onclick="order('1000 Followers', 150)">Order Now</button>
+      </div>
+      <div class="package">
+        <h3>500 Views</h3>
+        <p class="price">₹3</p>
+        <button onclick="order('500 Views', 3)">Order Now</button>
+      </div>
+      <div class="package">
+        <h3>1000 Views</h3>
+        <p class="price">₹5</p>
+        <button onclick="order('1000 Views', 5)">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="qr-section">
+    <h2>Pay Instantly via UPI</h2>
+    <p>Scan the QR code below to make a payment</p>
+    <img src="qr.png" alt="UPI QR Code" />
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2>Contact Support</h2>
+    <p>For questions or help, message us directly on <a href="#" onclick="order('Support', 0)">WhatsApp</a>.</p>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Insta Rise. All rights reserved.
+</footer>
+
+<script>
+  function order(packageName, price) {
+    const message = `Hello! I want to place an order for *${packageName}* priced at ₹${price}. Please share the next steps.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = '919359439116';
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
